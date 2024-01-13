@@ -13,7 +13,7 @@
 <body class="bg-dark">
     <h1 class="text-info text-center p-3">Registration Account</h1>
     <div class="bg-info py-4">
-        <h2 class="text-center">Login</h2>
+        <h2 class="text-center">Register</h2>
         <div class="container text-center">
             <form action="../actions/register.php" method="post" enctype="multipart/form-data">
                 <!-- name -->
@@ -39,7 +39,7 @@
                 <!-- Standard -->
                 <div class="mb-3">
                     <select name="standard" class="form-control w-50 m-auto">
-                        <option value="group">Group</option>
+                        <option value="candidate">Candidate</option>
                         <option value="voter">Voter</option>
                     </select>
                 </div>

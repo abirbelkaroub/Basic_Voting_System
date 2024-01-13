@@ -1,18 +1,4 @@
-<?php include 'actions/connect.php';
-if (isset($_POST['login'])) {
-    $name = $_POST['user_name'];
-    $password = $_POST['password'];
-    $mobile = $_POST['mobile'];
-    $standard = $_POST['standard'];
-    $select_sql = "select * from ``userdata";
-    $result = mysqli_query($connect, $sql) or die($connect);
-    if ($result) {
-    } else {
-        header('location:index.php');
-        echo "Issue inserting data";
-    }
-}
-?>
+<?php include 'actions/connect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +14,7 @@ if (isset($_POST['login'])) {
     <div class="bg-info py-4">
         <h2 class="text-center">Login</h2>
         <div class="container text-center">
-            <form action="" method="post">
+            <form action="actions/login.php" method="post">
                 <div class="mb-3">
                     <input class="form-control w-50 m-auto" type="text" name="user_name_login" placeholder="Enter Your User Name" require="require">
                 </div>
@@ -40,7 +26,7 @@ if (isset($_POST['login'])) {
                 </div>
                 <div class="mb-3">
                     <select name="standard_login" class="form-control w-50 m-auto">
-                        <option value="group">Group</option>
+                        <option value="candidate">Candidate</option>
                         <option value="voter">Voter</option>
                     </select>
                 </div>

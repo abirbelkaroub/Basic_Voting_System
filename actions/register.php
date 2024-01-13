@@ -18,7 +18,7 @@ if ($password != $password_confirmation) {
         ';
 } else {
     move_uploaded_file($user_image_temp_name, "../uploads/$product_image_name");
-    $sql = "insert into `userdata` (name,mobile,password,image,standard,status,votes) values ('$name','$mobile','$password','$password_confirmation','$standard',0,0)";
+    $sql = "insert into `userdata` (name,mobile,password,image,standard,status,votes) values ('$name','$mobile','$password','$product_image_name','$standard',0,0)";
     $result = mysqli_query($connect, $sql);
     if ($result) {
         echo '
